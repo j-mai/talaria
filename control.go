@@ -9,6 +9,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/spf13/viper"
 	"github.com/xmidt-org/webpa-common/device"
+	"github.com/xmidt-org/webpa-common/device/devicegate"
 	"github.com/xmidt-org/webpa-common/device/drain"
 	"github.com/xmidt-org/webpa-common/logging"
 	"github.com/xmidt-org/webpa-common/logging/logginghttp"
@@ -22,7 +23,7 @@ const (
 	ControlKey = "control"
 )
 
-func StartControlServer(logger log.Logger, manager device.Manager, registry xmetrics.Registry, v *viper.Viper) (func(http.Handler) http.Handler, error) {
+func StartControlServer(logger log.Logger, manager device.Manager, deviceGate devicegate.DeviceGate, registry xmetrics.Registry, v *viper.Viper) (func(http.Handler) http.Handler, error) {
 	if !v.IsSet(ControlKey) {
 		return xhttp.NilConstructor, nil
 	}
@@ -56,6 +57,9 @@ func StartControlServer(logger log.Logger, manager device.Manager, registry xmet
 
 	apiHandler.Handle("/device/gate", &gate.Status{Gate: g}).
 		Methods("GET")
+
+	apiHandler.Handle("/device/gate/filter", &devicegate.FilterHandler{Gate: deviceGate}).
+		Methods("POST", "PUT", "GET")
 
 	apiHandler.Handle("/device/drain", &drain.Start{d}).
 		Methods("POST", "PUT", "PATCH")
