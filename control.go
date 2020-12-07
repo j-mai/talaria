@@ -23,7 +23,7 @@ const (
 	ControlKey = "control"
 )
 
-func StartControlServer(logger log.Logger, manager device.Manager, deviceGate devicegate.DeviceGate, registry xmetrics.Registry, v *viper.Viper) (func(http.Handler) http.Handler, error) {
+func StartControlServer(logger log.Logger, manager device.Manager, deviceGate devicegate.Interface, registry xmetrics.Registry, v *viper.Viper) (func(http.Handler) http.Handler, error) {
 	if !v.IsSet(ControlKey) {
 		return xhttp.NilConstructor, nil
 	}
@@ -59,7 +59,7 @@ func StartControlServer(logger log.Logger, manager device.Manager, deviceGate de
 		Methods("GET")
 
 	apiHandler.Handle("/device/gate/filter", &devicegate.FilterHandler{Gate: deviceGate}).
-		Methods("POST", "PUT", "GET")
+		Methods("POST", "PUT", "GET", "DELETE")
 
 	apiHandler.Handle("/device/drain", &drain.Start{d}).
 		Methods("POST", "PUT", "PATCH")

@@ -8,6 +8,7 @@ require (
 	github.com/aws/aws-sdk-go v1.31.6 // indirect
 	github.com/billhathaway/consistentHash v0.0.0-20140718022140-addea16d2229 // indirect
 	github.com/c9s/goprocinfo v0.0.0-20190309065803-0b2ad9ac246b // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fatih/structs v1.1.0
 	github.com/go-kit/kit v0.9.0
 	github.com/go-playground/validator/v10 v10.3.0 // indirect
@@ -37,4 +38,6 @@ require (
 	github.com/xmidt-org/wrp-go/v3 v3.0.1
 )
 
-replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201124183640-d4861032c4ab
+replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201205223535-64063bd252b0
+
+// replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201204200048-5e13c96bebc3

@@ -178,6 +178,16 @@ github.com/influxdata/influxdb1-client v0.0.0-20200827194710-b269163b24ab h1:HqW
 github.com/influxdata/influxdb1-client v0.0.0-20200827194710-b269163b24ab/go.mod h1:qj24IKcXYK6Iy9ceXlo3Tc+vtHo9lIhSX5JddghvEPo=
 github.com/j-mai/webpa-common v1.11.2-0.20201124183640-d4861032c4ab h1:ihGErQ22MwXxBeMmYvVRD18UXgzD2YDm85IkJDLm174=
 github.com/j-mai/webpa-common v1.11.2-0.20201124183640-d4861032c4ab/go.mod h1:pauAlvcjgc47OiZyCDRXEnxan4jVM49qs8GunvPUSlM=
+github.com/j-mai/webpa-common v1.11.2-0.20201204022426-55aa5fe0d66b h1:vH8tWmwfenkRbpX2gpWLa0QrnENyuRwwAVnfYDQfVxg=
+github.com/j-mai/webpa-common v1.11.2-0.20201204022426-55aa5fe0d66b/go.mod h1:pauAlvcjgc47OiZyCDRXEnxan4jVM49qs8GunvPUSlM=
+github.com/j-mai/webpa-common v1.11.2-0.20201204170536-801d0cbd140f h1:R0dO1310wHqrfXFM+I/M6qaEJtJpxLcfoa896hl/a5A=
+github.com/j-mai/webpa-common v1.11.2-0.20201204170536-801d0cbd140f/go.mod h1:pauAlvcjgc47OiZyCDRXEnxan4jVM49qs8GunvPUSlM=
+github.com/j-mai/webpa-common v1.11.2-0.20201204200048-5e13c96bebc3 h1:OdRywqrRg8DLhouvnHG21/w2VgT4ZoM7gUDtscZlSmE=
+github.com/j-mai/webpa-common v1.11.2-0.20201204200048-5e13c96bebc3/go.mod h1:pauAlvcjgc47OiZyCDRXEnxan4jVM49qs8GunvPUSlM=
+github.com/j-mai/webpa-common v1.11.2-0.20201204211208-52a75141cbae h1:vJPOOn8hRiUBCW8s2DKyd+ROJ2rQhOYHpWTTZcrJqbY=
+github.com/j-mai/webpa-common v1.11.2-0.20201204211208-52a75141cbae/go.mod h1:pauAlvcjgc47OiZyCDRXEnxan4jVM49qs8GunvPUSlM=
+github.com/j-mai/webpa-common v1.11.2-0.20201205223535-64063bd252b0 h1:3mg+EQpETo6q6K2eK5zGD7MrChVIRJ3NnzL3bT9Ae7E=
+github.com/j-mai/webpa-common v1.11.2-0.20201205223535-64063bd252b0/go.mod h1:pauAlvcjgc47OiZyCDRXEnxan4jVM49qs8GunvPUSlM=
 github.com/jmespath/go-jmespath v0.3.0/go.mod h1:9QtRXoHjLGCJ5IBSaohpXITPlowMeeYCZ7fLUTSywik=
 github.com/jonboulle/clockwork v0.1.0/go.mod h1:Ii8DK3G1RaLaWxj9trq07+26W01tbo22gdxWY5EU2bo=
 github.com/json-iterator/go v1.1.6/go.mod h1:+SdeFBvtyEkXs7REEP0seUULqWtbJapLOCVDaaPEHmU=
@@ -309,7 +319,6 @@ github.com/spf13/pflag v1.0.3/go.mod h1:DYY7MBk1bdzusC3SYhjObp+wFpr4gzcvqqNjLnIn
 github.com/spf13/pflag v1.0.5 h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA=
 github.com/spf13/pflag v1.0.5/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
 github.com/spf13/viper v1.4.0/go.mod h1:PTJ7Z/lr49W6bUbkmS1V3by4uWynFiR9p7+dSq/yZzE=
-github.com/spf13/viper v1.6.1/go.mod h1:t3iDnF5Jlj76alVNuyFBk5oUMCvsrkbvZK0WQdfDi5k=
 github.com/spf13/viper v1.7.0 h1:xVKxvI7ouOI5I+U9s2eeiUfMaWBVoXA3AWskkrqK0VM=
 github.com/spf13/viper v1.7.0/go.mod h1:8WkrPz2fc9jxqZNCJI/76HCieCp4Q8HaLFoCha5qpdg=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
@@ -337,7 +346,6 @@ github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q
 github.com/xmidt-org/argus v0.3.10-0.20201105190057-402fede05764/go.mod h1:lnMCVB/i0gOlUOOd2WbzDDgzTEqP5TipzQ8xKIw+N/I=
 github.com/xmidt-org/arrange v0.1.9 h1:MgMCRH7uMg+LZWvuo3c+63UmEV73LRMyrYmm267E8oM=
 github.com/xmidt-org/arrange v0.1.9/go.mod h1:PRA8iEZ11L93NsEkDP56x1mZyfDcWxzDULgHj56TaEk=
-github.com/xmidt-org/bascule v0.8.0/go.mod h1:dPxlbNT3lCwYAtOq2zbzyzTEKgM+azLSbKKcVmgSHBY=
 github.com/xmidt-org/bascule v0.9.0 h1:CsMtwiDO4jjoOIh4pWe2U9tXA9A73CfohDsSvwzXm9Q=
 github.com/xmidt-org/bascule v0.9.0/go.mod h1:C64nSBtUTTK/f2/mCvvp/qJhav5raD0T+by68DCp/gU=
 github.com/xmidt-org/themis v0.4.4 h1:KewitRxStW1xOehDBi0YyGZyRv3PjFdYUEDvQFf1Nmk=

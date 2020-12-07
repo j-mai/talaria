@@ -60,7 +60,7 @@ func setupDefaultConfigValues(v *viper.Viper) {
 	v.SetDefault(RehasherServicesConfigKey, []string{applicationName})
 }
 
-func newDeviceManager(logger log.Logger, r xmetrics.Registry, v *viper.Viper) (device.Manager, devicegate.DeviceGate, *consul.ConsulWatcher, error) {
+func newDeviceManager(logger log.Logger, r xmetrics.Registry, v *viper.Viper) (device.Manager, devicegate.Interface, *consul.ConsulWatcher, error) {
 	deviceOptions, err := device.NewOptions(logger, v.Sub(device.DeviceManagerKey))
 	if err != nil {
 		return nil, nil, nil, err
@@ -83,6 +83,10 @@ func newDeviceManager(logger log.Logger, r xmetrics.Registry, v *viper.Viper) (d
 
 	g := &devicegate.FilterGate{
 		FilterStore: make(devicegate.FilterStore),
+		AllowedFilters: devicegate.FilterSet(map[interface{}]bool{
+			device.PartnerIDClaimKey: true,
+			"random-filter-key":      true,
+		}),
 	}
 
 	deviceOptions.Filter = g
