@@ -38,6 +38,6 @@ require (
 	github.com/xmidt-org/wrp-go/v3 v3.0.1
 )
 
-replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201205223535-64063bd252b0
+replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201209040320-11aa650150d8
 
-// replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201204200048-5e13c96bebc3
+// replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201209040320-11aa650150d8
