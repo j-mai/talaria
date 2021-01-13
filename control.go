@@ -7,6 +7,7 @@ import (
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
 	"github.com/gorilla/mux"
+	"github.com/justinas/alice"
 	"github.com/spf13/viper"
 	"github.com/xmidt-org/webpa-common/device"
 	"github.com/xmidt-org/webpa-common/device/devicegate"
@@ -48,6 +49,12 @@ func StartControlServer(logger log.Logger, manager device.Manager, deviceGate de
 			drain.WithDrainCounter(registry.NewCounter(DrainCounter)),
 		)
 
+		gateLogger = devicegate.GateLogger{
+			Logger: logger,
+		}
+
+		filterHandler = &devicegate.FilterHandler{Gate: deviceGate}
+
 		r          = mux.NewRouter()
 		apiHandler = r.PathPrefix(fmt.Sprintf("%s/%s", baseURI, version)).Subrouter()
 	)
@@ -58,8 +65,11 @@ func StartControlServer(logger log.Logger, manager device.Manager, deviceGate de
 	apiHandler.Handle("/device/gate", &gate.Status{Gate: g}).
 		Methods("GET")
 
-	apiHandler.Handle("/device/gate/filter", &devicegate.FilterHandler{Gate: deviceGate}).
-		Methods("POST", "PUT", "GET", "DELETE")
+	apiHandler.HandleFunc("/device/gate/filter", filterHandler.GetFilters).Methods("GET")
+
+	apiHandler.Handle("/device/gate/filter", alice.New(gateLogger.LogFilters).Then(http.HandlerFunc(filterHandler.UpdateFilters))).Methods("POST", "PUT")
+
+	apiHandler.Handle("/device/gate/filter", alice.New(gateLogger.LogFilters).Then(http.HandlerFunc(filterHandler.DeleteFilter))).Methods("DELETE")
 
 	apiHandler.Handle("/device/drain", &drain.Start{d}).
 		Methods("POST", "PUT", "PATCH")

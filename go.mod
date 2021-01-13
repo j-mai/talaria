@@ -10,7 +10,7 @@ require (
 	github.com/c9s/goprocinfo v0.0.0-20190309065803-0b2ad9ac246b // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fatih/structs v1.1.0
-	github.com/go-kit/kit v0.9.0
+	github.com/go-kit/kit v0.10.0
 	github.com/go-playground/validator/v10 v10.3.0 // indirect
 	github.com/gocql/gocql v0.0.0-20200505093417-effcbd8bcf0e // indirect
 	github.com/goph/emperror v0.17.3-0.20190703203600-60a8d9faa17b
@@ -21,10 +21,9 @@ require (
 	github.com/justinas/alice v1.2.0
 	github.com/prometheus/client_golang v1.4.1
 	github.com/rubyist/circuitbreaker v2.2.0+incompatible // indirect
-	github.com/samuel/go-zookeeper v0.0.0-20190810000440-0ceca61e4d75 // indirect
 	github.com/segmentio/ksuid v1.0.2
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
-	github.com/spf13/cast v1.3.0
+	github.com/spf13/cast v1.3.1
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.7.0
 	github.com/stretchr/testify v1.5.1
@@ -38,6 +37,6 @@ require (
 	github.com/xmidt-org/wrp-go/v3 v3.0.1
 )
 
-replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201209040320-11aa650150d8
+replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20210111212521-ca9f9480958e
 
-// replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201209040320-11aa650150d8
+// replace github.com/xmidt-org/webpa-common v1.11.2 => github.com/j-mai/webpa-common v1.11.2-0.20201218211511-2b754ff3cd9c

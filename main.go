@@ -83,10 +83,12 @@ func newDeviceManager(logger log.Logger, r xmetrics.Registry, v *viper.Viper) (d
 
 	g := &devicegate.FilterGate{
 		FilterStore: make(devicegate.FilterStore),
-		AllowedFilters: devicegate.FilterSet(map[interface{}]bool{
-			device.PartnerIDClaimKey: true,
-			"random-filter-key":      true,
-		}),
+		AllowedFilters: &devicegate.FilterSet{
+			Set: map[interface{}]bool{
+				device.PartnerIDClaimKey: true,
+				"random-filter-key":      true,
+			},
+		},
 	}
 
 	deviceOptions.Filter = g
